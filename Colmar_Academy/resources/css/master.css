@@ -1,0 +1,664 @@
+/* universal */
+html {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;    
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header */
+
+    /* desktop header */
+    @media only screen and (min-width: 471px) {
+        .mobile {
+            display: none;
+        }
+    }
+
+    header .desktop {
+        height: auto;   
+        margin: 0 1.3rem;   
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    header .desktop div {
+        margin: 0.6rem auto;
+        align-items: center;
+    }
+
+    header .desktop img {
+        margin-right: 0.5rem;
+    }
+
+    header .desktop span {
+        color: rgb(156, 156, 156);
+    }
+
+    header .desktop a {
+        color: black;
+        font-size: 0.8rem;
+        margin: 0 0.5rem;
+    }
+
+    /* mobile header */
+    @media only screen and (max-width: 470px) {
+        header .desktop {
+            display: none;
+        }
+    }
+
+    header .mobile {
+        height: 2.7rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+/* banner */
+.banner {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+    align-items: flex-end;
+    transition: height 1s;
+}
+
+.banner div {
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.banner a {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    color: rgb(63, 63, 75);
+    padding: 0.75vw 1.5vw;
+}
+
+    /* desktop banner */
+    @media only screen and (min-width: 471px) {
+        .banner {    
+            height: 31rem;
+        }
+
+        .banner div {
+            max-width: 40%;
+            left: 2rem;
+            bottom: 2rem;
+        }
+
+        .banner h1 {
+            font-weight: 300;
+            font-size: 6vw;
+            padding-bottom: 0.8rem;
+        }
+    
+        .banner h2 {
+            font-size: 1.65vw;
+            font-weight: 300;
+            padding-bottom: 1.2rem;
+        }
+    }  
+
+    /* mobile banner */
+    @media only screen and (max-width: 470px) {
+        .banner {
+            height: 20rem;
+            background-position: 30% 0;
+        }
+
+        .banner div {
+            max-width: 45%;
+            left: 1rem;
+            bottom: 1rem;
+        }
+
+        .banner h1 {
+            font-weight: 600;
+            font-size: 8vw;
+            padding-bottom: 0.8rem;
+        }
+    
+        .banner h2 {
+            font-size: 3.7vw;
+            font-weight: 400;
+            padding-bottom: 1.2rem;
+        }
+    }
+
+/* infomations */
+.informations {
+    margin: 0.2rem 0;
+    flex-wrap: wrap
+}
+
+/* main info  desktop only*/
+.main {
+    width: 100%;
+    height: 20rem;
+    background-image: url('../images/information-main.jpg');
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-weight: 300;  
+    transition: color 1s,
+        margin  700ms ease 300ms;
+}
+
+.main:hover {
+    color: rgb(41, 41, 41);
+    margin: 0.4rem 0.4rem;
+}
+
+.main .layover {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(74, 74, 74, 0.55);
+    transition: background-color 700ms;
+    align-items: flex-end;
+}
+
+.main .layover:hover {
+    background-color: rgba(255, 255, 255, 0.2);    
+}
+
+.main .content {
+    max-width: 60%;
+    flex-wrap: wrap;
+    position: relative;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.main h1 {
+    font-size: 6vw;
+    font-weight: 300;
+    padding-bottom: 0.8rem;
+}
+
+.main p {
+    font-size: 1.65vw;
+    padding-bottom: 0.8rem;
+    line-height: 1rem;
+}
+
+@media only screen and (max-width: 471px) {
+    .main {
+        display: none;
+    }
+}
+/* main info desktop only ends */
+
+/* side info */
+.side {
+    height: 7rem;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+}
+
+
+.side .info {
+    width: 33%;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;    
+}
+
+.side .info:active {
+    margin: 0.2rem 0.4rem;
+}
+
+#orientation {
+    background-image: url('../images/information-orientation-mobile.jpg');
+}
+
+#campus {
+    background-image: url('../images/information-campus-mobile.jpg');
+}
+
+#lecture {
+    background-image: url('../images/information-guest-lecture-mobile.jpg');
+}
+
+.side a {
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.side .layover {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(74, 74, 74, 0.1);
+    transition: background-color 700ms;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.info p {
+    font-size: 2.4vw;
+    font-weight: 300;
+    margin: 0.5rem 1rem;    
+}
+
+
+/* desktop info */
+@media only screen and (min-width: 471px) {
+    .side {
+        margin: 0.2rem 0.2rem 0 0.2rem;
+    }
+
+    .side .info {
+        transition: width 700ms,
+         margin 300ms;
+        margin: 0 0.2rem;
+    }
+
+    .side .info:hover {
+        width: 60%;
+    }
+
+    .side .layover:hover {
+        background-color: rgba(74, 74, 74, 0.55);
+    }
+
+    .info h1 {
+        font-size: 2.7vw;
+        font-weight: 300;
+    }
+
+    .info p {
+        display: none;
+    }
+    
+    .info:hover h1 {
+        display: none;
+    }
+
+    .info:hover p,
+    .info:hover a {
+        display: block;
+    }
+}
+/* mobile info */
+@media only screen and (max-width: 470px) {
+    .side {
+        flex-wrap: wrap;
+        height: 21rem;
+    }
+
+    .side .info {
+        width: 100%;
+        height: 33%;
+        transition: margin 500ms;        
+    }
+
+    .info h1 {
+        font-size: 7vw;
+        margin-top: 0.3rem;
+    }
+
+    .info p {
+        font-size: 4vw;
+        margin: 0 1rem 0.3rem 1rem;
+    }
+}
+
+/* new steps */
+.start {
+    width: 100%;
+    background-image: url('../images/starts-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 10%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.start span {
+    color: white;
+    text-align: center;
+    width: 100%
+}
+
+.category {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;;
+}
+
+
+.course img {
+    display: block;
+    width: 100%;
+}
+
+.course .brife {
+    margin: 16px;
+}
+
+.course h1 {
+    font-weight: 400;
+    font-size: 2vw;
+    transition: color 700ms;
+}
+
+/* deaktop category*/
+@media only screen and (min-width: 471px) {
+    .start .layer {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        transition: background-color 700ms 0ms;
+        font-size: 12vw;
+        font-weight: 300;
+    }
+
+    .start span {
+        transition: color 400ms 100ms,
+            width 0ms 200ms;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+        /* animation for cover */
+    .start:hover .layer{
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .start:hover .category {
+        z-index: 2;
+    }
+
+    .start:hover span {
+        color: rgba(255, 255, 255, 0);
+        width: 1px;
+    }
+        /* animation for cover ends */
+
+
+    .course {
+        margin: 1rem;
+        width: 17rem;
+        background-color: white;
+        transition: background-color 700ms,
+            color 700ms;
+    }
+
+    .course img {
+        display: block;
+        width: 100%;
+    }
+
+        /* animation for course card */
+    .course:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .course:hover h1 {
+        color: white;
+    }
+
+    .course p {
+        margin: 0.5rem 0;
+        font-weight: 300;
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+        color: gray;
+        transition: color 700ms;
+    }
+
+    .course:hover p {
+        color: white;
+    }
+        /* animation for course card ends */
+}
+
+
+/* mobile category */
+@media only screen and (max-width: 470px) {
+    .start span{
+        font-size: 7vw;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+    }
+
+    .course img,
+    .course p{
+        display: none;
+    }
+
+    .course {
+        width: 100%;
+        margin: 0.5rem 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);        
+    }
+
+    .course h1 {
+        font-size: 6vw;
+        padding: 0rem 0;
+        color: white;
+    }
+}
+
+
+/* thesis exhibit */
+.exhibit {
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.exhibit span {
+    color: white;
+    text-align: center;
+    width: 100%
+}
+
+.thesis {
+    width: 100%;
+}
+
+.thesis h1 {
+    font-weight: 400;
+    font-size: 2.5vw;
+}
+
+.thesis p {
+    font-weight: 300;
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    color: gray;
+}
+
+.video {
+    flex-direction: column;
+    background-color: 
+}
+
+.video video {
+    width: 100%;
+}
+
+.video h1 {
+    margin: 1rem 0 0.5rem 0.7rem;
+}
+
+.video p {
+    max-width: 90%;
+    margin-left: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+
+.text {
+    flex-direction: column;
+    width: 40%;
+    margin: 1rem 1rem 1rem 0;
+    justify-content: space-between;
+}
+
+.text h1 {
+    margin: 0.4rem 0.7rem;
+}
+
+.text p {
+    margin: 0.4rem 0.7rem;
+    max-width: 60%;
+}
+
+.artical {
+    align-items: center;
+}
+
+.artical img {
+    width: 35%;
+    height: 35%;
+}
+
+.artical div {
+    display: inline;
+}
+
+/* desktop exhibit */
+@media only screen and (min-width: 471px) {
+    .exhibit .layer {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        transition: background-color 700ms 0ms;
+        font-size: 12vw;
+        font-weight: 300;
+    }
+
+    .exhibit span {
+        transition: color 400ms 100ms,
+            width 0ms 200ms;
+        z-index: 3;
+        overflow: hidden;
+    }
+        /* animetion for cover*/
+    .exhibit:hover .layer{
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .exhibit:hover .thesis {
+        z-index: 2;
+    }
+
+    .video {
+        width: 60%;
+        margin: 1rem;
+    }
+
+    .exhibit:hover span {
+        color: rgba(255, 255, 255, 0);
+        width: 1px;
+    }
+        /* animetion for cover ends*/
+
+    .artical,
+    .video {
+        transition: background-color 450ms;
+    }
+        /* animation for thesis */
+    .artical:hover,
+    .video:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .artical:hover h1,
+    .artical:hover p,
+    .video:hover h1,
+    .video:hover p {
+        color: white;
+    }
+        /* animation for thesis ends */
+    
+}
+
+/* mobile thesis */
+@media only screen and (max-width: 470px) {
+    .thesis .text,
+    .layer {
+        display: none;
+    }
+
+    .video {
+        width: 100%;
+        margin: 0.3rem;
+    }
+
+    .video h1 {
+        font-size: 6vw;
+    }
+
+    .video p {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+}
+
+/* footer */
+footer {
+    height: 8rem;
+    background-image: url('../images/footer.jpg');
+    background-position: right bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: flex-end;
+}
+
+footer .copyright {
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 1vw;
+    color: white;
+    flex-wrap: wrap;
+}
+
+footer span,
+footer a {
+    margin: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
