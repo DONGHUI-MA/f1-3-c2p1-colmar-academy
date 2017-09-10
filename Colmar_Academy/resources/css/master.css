@@ -9,6 +9,7 @@ html {
 }
 
 a {
+    display: flex;
     text-decoration: none;
     color: inherit;
 }
@@ -399,9 +400,11 @@ a {
     }
         /* animation for cover ends */
 
+    .start a {
+        margin: 1rem;
+    }
 
     .course {
-        margin: 1rem;
         width: 17rem;
         background-color: white;
         transition: background-color 700ms,
@@ -496,9 +499,12 @@ a {
     color: gray;
 }
 
+#video {
+    margin: 1rem;
+}
+
 .video {
     flex-direction: column;
-    background-color: 
 }
 
 .video video {
@@ -538,7 +544,6 @@ a {
 
 .artical img {
     width: 35%;
-    height: 35%;
 }
 
 .artical div {
@@ -576,9 +581,12 @@ a {
         z-index: 2;
     }
 
-    .video {
+    .exhibit a {
         width: 60%;
-        margin: 1rem;
+    }
+
+    .text a {
+        width: 100%;   
     }
 
     .exhibit:hover span {
